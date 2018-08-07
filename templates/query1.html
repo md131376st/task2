@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block body %}
+    <h2 style="text-align: -moz-right; font-family: Roboto, Lucida Grande, Verdana, Arial, sans-serif " class=col-sm-offset-2 >
+        id:{{ id }}<br>
+        output: {{ output }}<br>
+        Word count:{{  WordCount}}<br>
+        Input string:{{ InputString}}<br>
+        Process Delay:{{ProcessingDelay}}<br>
+        Request Time and Date  : {{RequestTimeDate}}<br>
+        Response Time and date:{{ResponseTmeDate}}<br>
+    </h2>
+     <div class="btn-primary">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" class="btn btn-primary" ><a href="{% url 'task2:MyQuery'  %}" style="color: aliceblue"> try again</a> </button>
+                </div>
+            </div>
+{% endblock %}

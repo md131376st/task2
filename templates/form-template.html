@@ -1,0 +1,40 @@
+{#{% for field in query %}#}
+{#    <div class="form-group">#}
+{#          <div class="col-sm-offset-2 col-sm-10">#}
+{#              <span class="text-danger small">#}
+{#                  {{ field.errors }}#}
+{#              </span>#}
+{#          </div>#}
+{#        <label class="control-label col-sm-2">{{ field.label_tag }} </label>#}
+{#            <div class="col-sm-10">{{ field }}</div>#}
+{##}
+{#    </div>#}
+{#{%  endfor%}#}
+
+<div>
+        <fieldset>
+            <input type="hidden" name="csrfmiddlewaretoken" value="2IttJtM6SIblPrL7YiN1EUktfaU2MC7U1wJFGpKMsZCHF68mEb8aWXv30BAW8Bn1">
+            <div class="form-group ">
+                <label class="col-sm-2 control-label ">
+                    Input
+                </label>
+                <div class="col-sm-10">
+                    <input name="input" class="form-control" type="text" value>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label ">
+                    Delimiter
+                </label>
+                <div class="col-sm-10">
+                    <input name="delimiter" class="form-control" type="text" value>
+                </div>
+            </div>
+            <div class="form-actions">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary"> submit</button>
+                </div>
+            </div>
+
+        </fieldset>
+</div>

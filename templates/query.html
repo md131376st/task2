@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{#{% load static %}#}
+{% block body %}
+    {% for j in query %}
+        <br>
+            <ul><li >
+
+{#            {{ j.items }}#}
+            <div  class="myinfo">
+            {% for key, value  in j.items %}
+                {% if 'image' == key %}
+                    <img src={{ value}}>
+                {% else %}
+                <p> &nbsp;  {{ key|capfirst}}:{{value|capfirst }}<br></p>
+                {% endif %}
+                {% endfor %}
+            </div>
+            </li></ul>
+{#        <b><strong> @@@@@<br></strong></b>#}
+    {% endfor %}
+{
+
+{% endblock %}
+{##    {{ query?.['item'] }}}#}
+
+{#    {{ query.header}}#}
+{#    {{ query|make_dict}}#}
+{#    {%  %}#}
+{#    {{ query }}#}
+{#    <strong> <br> start <br></strong>#}
+{##}
+{#    <script> var data ={{ query|json }}</script>#}
+{#    {% for queryset in  query%}#}
+{##}
+{#           {{  queryset|wordcount}}#}
+{#        {%for var in queryset.strip %}#}
+{#            {{ var }}#}
+{#            {% endfor %}#}
+{##}
+{##}
+{#    {% endfor %}#}
+
+{#    {{ query|json }}#}
+{#    <script id="show" type="application/json">#}
+{#        {"result" :"hi"}#}
+{#    </script>#}
+{#    {% load custom_filter %}#}
+{#        onclick = "jsfunc('{{data|json}}')"#}
+{#        function showdetails(query){#}
+{#    }#}
+{#    <per>{{ query|safe }}</per>#}
+{##}
+{#        <script type="text/javascript">#}
+{#            var obj = JSON.parse({{ query }})#}
+{#            var  obj = "hi"#}
+{#            $.ajax({#}
+{#                url:'query',#}
+{#                type: 'GET',#}
+{#                success: function (query) {#}
+{#                    alert("Success");#}
+{#                    document.write(query);#}
+{#                    print(document.items);#}
+{##}
+{#                },#}
+{#                dataType: 'jsonp'#}
+{#                }#}
+{##}
+{#            )#}
+{##}
+{#        </script>#}
+{#    <body>#}
+{#    <script type="text/javascript">#}
+{#        document.write(obj);#}
+{#        success({{ query }})#}
+{#    </script>#}
+{#    </body>#}
+{#        hi#}
+{#         <per>{{ data|hash:object_list }}</per>#}
+{#           <h3> {{ key }}: {{ value }}</h3>#}
+{##}
+{#                {{ data }}#}
+{#        {% for i in queryset.expandtabs%}#}
+{#            {{ i }}#}
+{#            {{ queryset.expandtabs }}#}
+{##}
+{#        {% if {{  i }}== 'results'%}#}
+{#                {{ i }}#}
+{#            {% endif %}#}
+{#            {% endfor %}#}
+{#        # print(type(json_var[i]))#}
+{#        for j in json_var[i]:#}
+{#            for z in j:#}
+{#                print(z, ":",j[z])#}
+{#        {% for key, value in data %}#}
+{#        <h3> {{query.split}}</h3>#}
+{#        <h3> hi <br></h3>#}
+{#        <h3> {{ key }}: {{ value }}</h3>#}
+{#            {% endfor %}#}
+{#        <p> </p>#}
+{#        <p> {{ kind }}<br>{{ totalItems }}<br> {{ items }} </p>#}
+{#    {% endfor %}#}
+{#    {{ query.format}}#}
